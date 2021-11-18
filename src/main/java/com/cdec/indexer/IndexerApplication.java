@@ -33,7 +33,7 @@ public class IndexerApplication implements CommandLineRunner {
 
         JsonReader reader = new JsonReader(
                 new InputStreamReader(
-                        new FileInputStream("data/xlec-v0.json"), "UTF-8"));
+                        new FileInputStream("data/xlec-v1.json"), "UTF-8"));
 
         int count = 0;
         reader.beginObject();
