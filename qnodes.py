@@ -13,15 +13,16 @@ with open('data/titles.csv', newline='') as csvfile:
             response = requests.get(url = URL)
             json = response.json()
             entities = json['entities']
-            node = entities[node]
-            claims = node['claims']
-            if 'P31' in claims:
-                property = claims['P31']
-                for elem in property:
-                    id = elem['mainsnak']['datavalue']['value']['id']
-                    if(id not in type_map):
-                        type_map[id] = 0
-                    type_map[id] += 1
+            if node in entities:
+                node = entities[node]
+                claims = node['claims']
+                if 'P31' in claims:
+                    property = claims['P31']
+                    for elem in property:
+                        id = elem['mainsnak']['datavalue']['value']['id']
+                        if(id not in type_map):
+                            type_map[id] = 0
+                        type_map[id] += 1
 
         count += 1
         print(count)
@@ -35,9 +36,10 @@ for key in type_map:
     response = requests.get(url = URL)
     json = response.json()
     entities = json['entities']
-    node = entities[node]
-    name = node['labels']['en']['value']
-    name_map[name] = type_map[key]
+    if node in entities:
+        node = entities[node]
+        name = node['labels']['en']['value']
+        name_map[name] = type_map[key]
 
     count += 1
     print(count)
