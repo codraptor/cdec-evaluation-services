@@ -1,3 +1,3 @@
-# cdec-indexer
+# cdec-evaluation-services
 
-Uses Java to index the inlink mapping JSON onto a POSTGRES server.
+Java ( Spring Boot ) service layer for the CDEC data evaluation portal.
