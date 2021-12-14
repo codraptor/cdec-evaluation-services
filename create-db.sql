@@ -1,4 +1,3 @@
-create table nodes ( id varchar(20) primary key);
-create table titles ( node varchar(20), lan varchar(10), text varchar(1000) );
-create table inlinks ( node varchar(20), lan varchar(10), title varchar(1000), mention varchar(10000));
-
+create table wikidata ( node varchar(20), language varchar(10), label text, description text, wikipedia_title text, wikipedia_description text);
+create table links ( node varchar(20), language varchar(10), inlink_title text, context text, updated_by varchar(50), updated_time timestamp,
+response varchar(10));
