@@ -21,7 +21,7 @@ public class CorsFilterConfig extends OncePerRequestFilter {
         if ("http://localhost:3000".equals(request.getHeader("origin"))) {
             response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
         } else if ("https://youthful-brahmagupta-d06e8f.netlify.app".equals(request.getHeader("origin"))) {
-            response.setHeader("Access-Control-Allow-Origin", "https://elegant-colden-994669.netlify.app");
+            response.setHeader("Access-Control-Allow-Origin", "https://youthful-brahmagupta-d06e8f.netlify.app");
         }
 
         response.setHeader("Access-Control-Allow-Credentials", "true");
