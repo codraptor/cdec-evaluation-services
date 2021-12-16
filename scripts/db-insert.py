@@ -36,7 +36,7 @@ try:
         print(count)
         count += 1
 
-    tsv_file2 = open("../xlec-data.item-postproc.tsv")
+    tsv_file2 = open("../label_desc.tsv")
     read_tsv2 = csv.reader(tsv_file2, delimiter="\t")
 
     count = 0
