@@ -20,8 +20,8 @@ public class CorsFilterConfig extends OncePerRequestFilter {
 
         if ("http://localhost:3000".equals(request.getHeader("origin"))) {
             response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-        } else if ("https://youthful-brahmagupta-d06e8f.netlify.app".equals(request.getHeader("origin"))) {
-            response.setHeader("Access-Control-Allow-Origin", "https://youthful-brahmagupta-d06e8f.netlify.app");
+        } else if ("http://miami.lti.cs.cmu.edu:3000".equals(request.getHeader("origin"))) {
+            response.setHeader("Access-Control-Allow-Origin", "http://miami.lti.cs.cmu.edu:3000");
         }
 
         response.setHeader("Access-Control-Allow-Credentials", "true");
