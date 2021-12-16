@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.sql.Timestamp;
 
 @Data
 @NoArgsConstructor
@@ -30,21 +29,6 @@ public class EntryEntity {
 
     @Column(name = "context")
     private String context;
-
-//    @Column(name = "updated_by")
-//    private String updatedBy;
-
-//    @Column(name = "response")
-//    private String response;
-
-//    @Column(name = "updated_time", length = 200)
-//    private Timestamp updatedTime;
-
-    @Column(name = "label")
-    private String label;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "wikipedia_title")
     private String wikipediaTitle;

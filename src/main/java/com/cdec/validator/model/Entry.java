@@ -19,8 +19,6 @@ public class Entry {
     private String updatedBy;
     private String response;
     private Timestamp updatedTime;
-    private String label;
-    private String description;
     private String wikipediaTitle;
     private String wikipediaDescription;
 

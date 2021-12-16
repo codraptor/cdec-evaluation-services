@@ -20,12 +20,6 @@ public class WikidataEntity {
     @EmbeddedId
     private WikidataEntityId id;
 
-    @Column(name = "label")
-    private String label;
-
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "wikipedia_title")
     private String wikipediaTitle;
 
@@ -49,8 +43,6 @@ public class WikidataEntity {
     public String toString() {
         return "WikidataEntity{" +
                 "id=" + id +
-                ", label='" + label + '\'' +
-                ", description='" + description + '\'' +
                 ", wikipediaTitle='" + wikipediaTitle + '\'' +
                 ", wikipediaDescription='" + wikipediaDescription + '\'' +
                 '}';

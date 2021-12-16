@@ -48,8 +48,6 @@ public class LinkService {
             Entry entry = new Entry();
             entry.setContext(entity.getContext());
             entry.setId(entity.getId());
-            entry.setLabel(entity.getLabel());
-            entry.setDescription(entity.getDescription());
             entry.setLanguage(entity.getLanguage());
             entry.setNode(entity.getNode());
             entry.setInlinkTitle(entity.getInlinkTitle());

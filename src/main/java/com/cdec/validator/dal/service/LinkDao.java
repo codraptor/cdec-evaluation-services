@@ -39,7 +39,7 @@ public class LinkDao {
         Session session = entityManagerFactory.unwrap(SessionFactory.class).openSession();
 
         javax.persistence.Query query = session.createNativeQuery("select l.id, l.node, l.language, l.inlink_title, " +
-                "l.context, w.label, w.description, w.wikipedia_title, w.wikipedia_description from links l join wikidata w on " +
+                "l.context, w.wikipedia_title, w.wikipedia_description from links l join wikidata w on " +
                 "(l.node = w.node and l.language = w.language) join user_languages ul on ul.language = l.language " +
                 "join user_details u on u.user_id = ul.user_id where l.response is null and u.username = '" + username + "' LIMIT 1", EntryEntity.class);
 
