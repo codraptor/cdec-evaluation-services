@@ -51,7 +51,7 @@ try:
             title = row[2]
             description = row[3]
 
-            cursor.execute("INSERT INTO wikidata VALUES(%s, %s, %s, %s, null, null, null)", (node, lang, title, description))
+            cursor.execute("INSERT INTO wikidata VALUES(%s, %s, %s, %s)", (node, lang, title, description))
             connection.commit() 
 
         print(count)
