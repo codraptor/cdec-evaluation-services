@@ -28,4 +28,9 @@ public class AuthenticationController {
         return response;
     }
 
+    @RequestMapping(value = "/validateToken", method = RequestMethod.GET)
+    public ResponseEntity<String> validateToken() {
+        return ResponseEntity.ok("SUCCESS");
+    }
+
 }
