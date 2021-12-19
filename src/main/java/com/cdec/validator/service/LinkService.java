@@ -9,6 +9,7 @@ import com.cdec.validator.model.request.UpdateEntryRequest;
 import com.cdec.validator.utils.TimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
 public class LinkService {
@@ -41,12 +42,21 @@ public class LinkService {
 
     }
 
+    private String updateContext(String context){
+
+        context = StringUtils.replace(context,"</a>","</b></u>");
+        context = StringUtils.replace(context, "<a>","<u><b>");
+
+        return context;
+
+    }
+
     private Entry fromEntity(EntryEntity entity) {
 
         if (entity != null) {
 
             Entry entry = new Entry();
-            entry.setContext(entity.getContext());
+            entry.setContext(updateContext(entity.getContext()));
             entry.setId(entity.getId());
             entry.setLanguage(entity.getLanguage());
             entry.setNode(entity.getNode());
